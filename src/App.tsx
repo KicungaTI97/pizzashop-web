@@ -1,11 +1,15 @@
 import './globals.css'
 
-import { Helmet } from 'react-helmet-async' // permite gerenciar metadados de documentos HTML, como <title>, <meta>, <link>
+import { Helmet, HelmetProvider } from 'react-helmet-async'
+import { RouterProvider } from 'react-router-dom'
+
+import { router } from './routes'
 
 export function App() {
   return (
-    <>
-      <Helmet title="Login" />
-    </>
+    <HelmetProvider>
+      <Helmet titleTemplate="%s | pizza.shop" />
+      <RouterProvider router={router} />
+    </HelmetProvider>
   )
 }
