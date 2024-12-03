@@ -1,11 +1,10 @@
-import { Dialog, DialogContent, DialogTrigger } from '@radix-ui/react-dialog'
+import { Dialog, DialogTrigger } from '@radix-ui/react-dialog'
 import { ArrowRight, Search, X } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
 import { TableCell, TableRow } from '@/components/ui/table'
 
-import OrderDetails from './order-details'
-
+import { OrderDetails } from './order-details'
 export function OrderTableRow() {
   return (
     <div>
